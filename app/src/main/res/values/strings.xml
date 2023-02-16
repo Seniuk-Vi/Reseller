@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Reseller</string>
+    <string name="navigation_drawer_open">Open Navigation drawer</string>
+    <string name="navigation_drawer_close">Close Navigation drawer</string>
+
+    <string-array name="Categories">
+        <item>Category</item>
+        <item>The baby world</item>
+        <item>Estate</item>
+        <item>Transport</item>
+        <item>Entertainment</item>
+        <item>Spare parts for transport</item>
+        <item>Work</item>
+        <item>Animals</item>
+        <item>House and garden</item>
+        <item>Electronics</item>
+        <item>Clothes</item>
+    </string-array>
+
+    <string-array name="Sorting">
+        <item>Sorting</item>
+        <item>Recommended</item>
+        <item>Cheapest</item>
+        <item>The most expensive </item>
+        <item>Newest</item>
+
+
+    </string-array>
+    <array name="autosize_text_sizes">
+        <item>10sp</item>
+        <item>12sp</item>
+        <item>20sp</item>
+        <item>40sp</item>
+        <item>100sp</item>
+    </array>
+    <!--    <color name="on_white">#000000</color>-->
+</resources>

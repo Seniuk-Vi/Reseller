@@ -1,0 +1,206 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:outlineAmbientShadowColor="@color/background">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardview_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:elevation="300dp"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="16dp">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/book_mystorage_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="300dp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="fitCenter"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/progress_barr"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_below="@+id/book_mystorage_image"
+                        android:layout_gravity="center"
+                        android:progress="100"
+                        android:visibility="visible" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/book_mystorage_heading_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="50"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/book_mystorage_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Heading"
+                    android:inputType="text|textCapSentences"
+                    android:textAlignment="center"
+                    android:textSize="22dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/book_mystorage_desc_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="500"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/book_mystorage_desc"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:hint="Description"
+                    android:inputType="text|textMultiLine|textCapSentences"
+                    android:maxLength="500"
+                    android:maxLines="10"
+                    android:textSize="22sp" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/book_mystorage_price_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="9"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/book_mystorage_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Price"
+                    android:inputType="number"
+                    android:maxLength="9"
+
+                    android:textSize="22sp" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_cat_ERROR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:errorEnabled="true">
+            <Spinner
+                android:id="@+id/book_spinner_category_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/book_switch_privasy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:thumb="@drawable/switch1"
+
+                    app:showText="true"
+                    app:track="@drawable/track_switch">
+
+                </com.google.android.material.switchmaterial.SwitchMaterial>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@+id/book_switch_privasy"
+                    android:gravity="center"
+                    android:text="Private"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/pop_up"
+                android:backgroundTint="@color/colorAccentStronger"
+                android:fontFamily=""
+                android:inputType="textMultiLine"
+                android:text="  Delete post  "
+                android:textColor="#fff"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/upload"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/pop_up"
+                android:backgroundTint="@color/green"
+                android:fontFamily=""
+                android:inputType="textMultiLine"
+                android:text="Change"
+                android:textColor="#fff"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

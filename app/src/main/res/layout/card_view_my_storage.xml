@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview_id"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:clickable="true"
+
+    android:foreground="?selectableItemBackground"
+    app:cardCornerRadius="20dp">
+    //250 height
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+
+            android:id="@+id/book_img_id"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#2d2d2d"
+            android:scaleType="centerCrop"
+            android:transitionName="image_transition" />
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/book_img_id"
+            android:gravity="center"
+
+            >
+
+
+
+            <TextView
+                android:id="@+id/book_price_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="8dp"
+                android:maxWidth="100dp"
+                android:text="222"
+                android:textColor="@color/PriceColor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:transitionName="price_transition" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@id/book_price_id"
+                android:text="$"
+                android:textColor="@color/PriceColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:text="Category"
+                android:textColor="@color/colorAccentStronger"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/book_title_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relative"
+            android:layout_gravity="center"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Sneakers"
+            android:textSize="25sp"
+            android:transitionName="heading_transition" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/book_title_id"
+            >
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+              >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Orders: 0"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="35sp"/>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="50dp"
+                    android:background="@color/colorAccentStronger"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Views: 0"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="35sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

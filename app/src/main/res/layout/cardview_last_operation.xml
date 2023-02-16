@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview_storage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp"
+    android:clickable="true"
+
+    android:foreground="?selectableItemBackground"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_just"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:id="@+id/book_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/search_et"
+                    android:backgroundTint="@color/colorAccentStronger"
+                    android:elevation="1dp"
+                    android:text="  NEW!  "
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:transitionName="price_transition"
+                    android:visibility="invisible" />
+
+                <ImageView
+
+                    android:id="@+id/card_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimaryDark" />
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.8">
+
+
+            <TextView
+                android:id="@+id/card_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="top|center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Heading"
+                android:textDirection="anyRtl"
+                android:textSize="25sp" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/card_price"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@id/card_heading"-->
+            <!--                android:layout_marginLeft="5dp"-->
+            <!--                android:gravity="top|left"-->
+            <!--                android:paddingLeft="10dp"-->
+            <!--                android:paddingRight="10dp"-->
+            <!--                android:text="Price: 222 $"-->
+            <!--                android:textSize="20sp" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/card_category"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@id/card_heading"-->
+            <!--                android:layout_marginLeft="5dp"-->
+            <!--                android:gravity="top|left"-->
+            <!--                android:paddingLeft="10dp"-->
+            <!--                android:paddingRight="10dp"-->
+            <!--                android:text="Category"-->
+            <!--                android:textColor="@color/colorAccentStronger"-->
+            <!--                android:textSize="20sp" />-->
+
+            <TextView
+                android:id="@+id/customer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_heading"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Customer"
+                android:textColor="@color/colorAccentStronger"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/telephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/customer"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="10dp"
+
+                android:paddingRight="10dp"
+                android:text="065752820"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/telephone"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Address: Zhovkva"
+                android:textSize="25sp" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

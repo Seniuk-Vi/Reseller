@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:outlineAmbientShadowColor="@color/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardview_id"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:elevation="3dp"
+                android:layout_marginTop="16dp"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="16dp">
+
+
+                <LinearLayout
+                    android:id="@+id/layout_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/pick_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:background="@drawable/plus"
+
+                        android:scaleType="centerCrop"
+                        />
+
+                    <TextView
+                        android:id="@+id/pick_item_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pick item"
+                        android:textSize="25sp"
+                        android:gravity="center"/>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ordering_name_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="35"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ordering_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Customer name"
+                    android:maxLength="35"
+                    android:inputType="text|textCapSentences"
+                    android:textAlignment="center"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ordering_address_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="25"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ordering_address"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:hint="Customer address (Town)"
+                    android:inputType="text|textMultiLine|textCapSentences"
+                    android:maxLength="25"
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ordering_phone_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+
+                app:errorEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ordering_phone"
+                    android:maxLength="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Telephone number"
+                    android:inputType="phone" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/order_btn"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/pop_up"
+                android:backgroundTint="@color/green"
+                android:layout_marginBottom="16dp"
+                android:inputType="textMultiLine"
+                android:text="GO!"
+                android:textSize="25sp"
+                android:textColor="#fff" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

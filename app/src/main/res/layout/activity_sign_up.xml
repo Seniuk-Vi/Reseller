@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:outlineAmbientShadowColor="@color/colorPrimaryDark">
+
+    <!--    <FrameLayout-->
+
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="?attr/actionBarSize"-->
+    <!--        android:background="@color/colorPrimaryDark"-->
+    <!--        android:elevation="14dp"-->
+    <!--        android:outlineAmbientShadowColor="@color/colorAccent">-->
+
+    <!--        <TextView-->
+
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:text="SIGNING"-->
+    <!--            android:textColor="#fff"-->
+    <!--            android:textSize="32dp" />-->
+    <!--    </FrameLayout>-->
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="Sign up"
+        android:textColor="@color/colorAccentStronger"
+        android:textSize="65dp" />
+
+    <TextView
+        android:id="@+id/see_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcome"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="-14dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="to become a billionaire!"
+        android:textColor="@color/colorPrimaryDark"
+
+        android:layout_marginRight="32dp"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+
+        android:orientation="vertical">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_email_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:padding="16dp"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_email"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_name_loginIn_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_input_email_error"
+            android:padding="16dp"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_name"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_password_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_input_name_loginIn_error"
+            android:padding="16dp"
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_password"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/SignUping"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_input_password_error"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            android:background="@drawable/pop_up"
+            android:fontFamily=""
+            android:padding="16dp"
+            android:backgroundTint="@color/colorAccentStronger"
+            android:text="Sign Up"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SignUping"
+            android:gravity="center"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/tvLog_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="Already have an account? "
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_below="@id/tvLog_name"
+                android:text="Sign In here!"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorAccentStronger"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

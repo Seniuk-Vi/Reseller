@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "440966383225",
+    "firebase_url": "https://reseller-8dd71.firebaseio.com",
+    "project_id": "reseller-8dd71",
+    "storage_bucket": "reseller-8dd71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440966383225:android:d9de2c25963f4a8b3ff6a8",
+        "android_client_info": {
+          "package_name": "com.example.resellerSamsung"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440966383225-7vvhbd4kbdjh22a4pgof141mt7049h45.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.resellerSamsung",
+            "certificate_hash": "0d0eeebb9521ceb25341ee31f82a4724ca25ffc0"
+          }
+        },
+        {
+          "client_id": "440966383225-88tfg0n2vn26k1g6gl1qeojap1bkbc0c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9s3qRmP-WFGsEWH4Siop_uBWyP0jUdeg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440966383225-88tfg0n2vn26k1g6gl1qeojap1bkbc0c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

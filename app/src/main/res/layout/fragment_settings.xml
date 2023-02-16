@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+
+    android:fitsSystemWindows="true">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/main.appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+
+        android:fitsSystemWindows="true"
+        >
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@+id/main.collapsing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        app:contentScrim="?attr/colorPrimary"
+        app:expandedTitleMarginEnd="64dp"
+        app:expandedTitleMarginStart="48dp"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="405dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@drawable/gradientprof"
+                android:orientation="vertical">
+
+                <com.alexzh.circleimageview.CircleImageView
+                    android:id="@+id/image_prof"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="45dp"
+                    android:src="@drawable/no_photo"
+                    app:view_borderColor="@color/white"
+                    app:view_borderWidth="2dp" />
+
+                <TextView
+                    android:id="@+id/name_prof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="Wiliam Snoe"
+                    android:textColor="#fff"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="275dp"
+                android:layout_marginRight="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lot"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/lot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:text="0"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="purchases"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/purch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:text="0"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Views"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/views"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:text="0"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+</com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/progress_globalstorage3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+                <RelativeLayout
+                    android:id="@+id/empty_privacy2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/empty"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/empty_box"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/empty"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="26sp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="Nothing found"
+                        android:textSize="30dp" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_id3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout><!--    <?xml version="1.0" encoding="utf-8"?>&ndash;&gt;-->
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:background="@color/white"-->
+    <!--    android:orientation="vertical"-->
+    <!--   >-->
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="405dp">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="350dp"-->
+    <!--            android:background="@color/colorPrimaryDark"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <com.alexzh.circleimageview.CircleImageView-->
+    <!--                android:id="@+id/image_prof"-->
+    <!--                android:layout_width="150dp"-->
+    <!--                app:view_borderColor="@color/white"-->
+    <!--                app:view_borderWidth="2dp"-->
+    <!--                android:layout_height="150dp"-->
+    <!--                android:layout_gravity="center_horizontal"-->
+    <!--                android:layout_marginTop="45dp"-->
+    <!--                android:src="@drawable/no_photo" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/name_prof"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_gravity="center_horizontal"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:text="Wiliam Snoe"-->
+    <!--                android:textColor="#fff"-->
+    <!--                android:textSize="21sp"-->
+    <!--                android:textStyle="bold" />-->
+    <!--        </LinearLayout>-->
+
+    <!--        <androidx.cardview.widget.CardView-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_marginLeft="16dp"-->
+    <!--            android:layout_marginRight="16dp"-->
+    <!--            android:layout_height="120dp"-->
+    <!--            android:layout_centerHorizontal="true"-->
+    <!--            android:layout_marginTop="275dp">-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:orientation="horizontal"-->
+    <!--                android:weightSum="3">-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:orientation="vertical">-->
+
+    <!--                    <TextView-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:text="Lot"-->
+    <!--                        android:textSize="20sp" />-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/lot"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:paddingTop="10dp"-->
+    <!--                        android:text="0"-->
+    <!--                        android:textSize="20sp"-->
+    <!--                        android:textStyle="bold" />-->
+
+    <!--                </LinearLayout>-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:orientation="vertical">-->
+
+    <!--                    <TextView-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:text="purchases"-->
+    <!--                        android:textSize="20sp" />-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/purch"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:paddingTop="10dp"-->
+    <!--                        android:text="0"-->
+    <!--                        android:textSize="20sp"-->
+    <!--                        android:textStyle="bold" />-->
+
+    <!--                </LinearLayout>-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:orientation="vertical">-->
+
+    <!--                    <TextView-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:text="Views"-->
+    <!--                        android:textSize="20sp" />-->
+
+    <!--                    <TextView-->
+    <!--                        android:id="@+id/views"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:paddingTop="10dp"-->
+    <!--                        android:text="0"-->
+    <!--                        android:textSize="20sp"-->
+    <!--                        android:textStyle="bold" />-->
+
+    <!--                </LinearLayout>-->
+    <!--            </LinearLayout>-->
+
+    <!--        </androidx.cardview.widget.CardView>-->
+    <!--    </RelativeLayout>-->
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <ProgressBar-->
+    <!--            android:id="@+id/progress_globalstorage3"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerInParent="true" />-->
+    <!--        <RelativeLayout-->
+    <!--            android:id="@+id/empty_privacy2"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerInParent="true"-->
+    <!--            android:visibility="invisible"-->
+    <!--            >-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/empty"-->
+    <!--                android:layout_width="200dp"-->
+    <!--                android:layout_height="200dp"-->
+    <!--                android:layout_centerInParent="true"-->
+    <!--                android:src="@drawable/empty_box"-->
+
+    <!--                />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@id/empty"-->
+    <!--                android:text="Nothing found"-->
+    <!--                android:layout_marginTop="26sp"-->
+    <!--                android:fontFamily="@font/nunito_bold"-->
+    <!--                android:layout_centerHorizontal="true"-->
+    <!--                android:textSize="30dp"/>-->
+    <!--        </RelativeLayout>-->
+    <!--        <androidx.recyclerview.widget.RecyclerView-->
+    <!--            android:id="@+id/recyclerview_id3"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent" />-->
+
+    <!--    </RelativeLayout>-->
+
+
+    <!--</LinearLayout>&lt;!&ndash;<?xml version="1.0" encoding="utf-8"?>&ndash;&gt;-->
+    <!--    &lt;!&ndash;<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;-->
+    <!--    &lt;!&ndash;    xmlns:app="http://schemas.android.com/apk/res-auto"&ndash;&gt;-->
+    <!--    &lt;!&ndash;    android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;    android:layout_height="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;    android:background="@color/background"&ndash;&gt;-->
+    <!--    &lt;!&ndash;    android:orientation="vertical">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;    <ScrollView&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:layout_height="match_parent">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;        <LinearLayout&ndash;&gt;-->
+    <!--    &lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;            android:layout_height="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;            android:orientation="vertical">&ndash;&gt;-->
+
+
+    <!--    &lt;!&ndash;            <TextView&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                style="@style/TextColor"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_height="50dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_centerInParent="true"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_gravity="center"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_margin="16dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:gravity="center"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:text="Profile"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:textColor="@color/PopUp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:fontFamily="@font/nunito_semibold"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:textSize="35sp" />&ndash;&gt;-->
+
+
+    <!--    &lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_height="50dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_marginRight="16dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:orientation="horizontal"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_marginBottom="16dp">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                <ImageView&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_width="70dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginLeft="10dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginTop="8dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginRight="10dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginBottom="8dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:src="@drawable/ic_text_fields_black_24dp" />&ndash;&gt;-->
+
+
+    <!--    &lt;!&ndash;                <LinearLayout&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:orientation="vertical">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                    <TextView&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:id="@+id/ChangeName"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_height="49.7dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:gravity="center|left"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:text="Change name"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:textSize="20sp">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                    </TextView>&ndash;&gt;-->
+
+
+    <!--    &lt;!&ndash;                    <View&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_height="0.3dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_marginRight="26dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:background="@color/LightGray" />&ndash;&gt;-->
+    <!--    &lt;!&ndash;                </LinearLayout>&ndash;&gt;-->
+    <!--    &lt;!&ndash;            </LinearLayout>&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_height="50dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_marginRight="16dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_marginBottom="16dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:orientation="horizontal">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                <ImageView&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_width="70dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginLeft="10dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginTop="8dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginRight="10dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginBottom="8dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:src="@drawable/ic_lock_black_24dp" />&ndash;&gt;-->
+
+
+    <!--    &lt;!&ndash;                <LinearLayout&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:orientation="vertical">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                    <TextView&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:id="@+id/ChangePassword"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_height="49.7dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:gravity="center|left"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:text="Change password"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:textSize="20sp">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                    </TextView>&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                    <View&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_height="0.3dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_marginRight="26dp"&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                        android:background="@color/LightGray" />&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                </LinearLayout>&ndash;&gt;-->
+    <!--    &lt;!&ndash;            </LinearLayout>&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_height="50dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_marginRight="16dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_marginBottom="16dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:orientation="horizontal">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                <ImageView&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_width="70dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginLeft="10dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginTop="8dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginRight="10dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginBottom="8dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:src="@drawable/ic_email_black_24dp" />&ndash;&gt;-->
+
+
+    <!--    &lt;!&ndash;                <LinearLayout&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:orientation="vertical">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                    <TextView&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:id="@+id/ChangeEmail"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_height="49.7dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:gravity="center|left"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:text="Change email"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:textSize="20sp">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                    </TextView>&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                    <View&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_height="0.3dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_marginRight="26dp"&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                        android:background="@color/LightGray" />&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                </LinearLayout>&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;            </LinearLayout>&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_height="50dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_marginRight="16dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_marginBottom="16dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:orientation="horizontal">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                <ImageView&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_width="70dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginLeft="10dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginTop="8dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginRight="10dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginBottom="8dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:src="@drawable/ic_photo_camera_black_24dp" />&ndash;&gt;-->
+
+
+    <!--    &lt;!&ndash;                <LinearLayout&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:orientation="vertical">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                    <TextView&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:id="@+id/ChangePhoto"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_height="49.7dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:gravity="center|left"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:text="Change photo"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:textSize="20sp">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                    </TextView>&ndash;&gt;-->
+
+
+    <!--    &lt;!&ndash;                </LinearLayout>&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;            </LinearLayout>&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;            <View&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_height="10dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:background="@color/LightGray" />&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;            <TextView&ndash;&gt;-->
+    <!--    &lt;!&ndash;                style="@style/TextColor"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_height="50dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_centerInParent="true"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_gravity="center"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:gravity="center"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:text="Account"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_margin="16dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:textColor="@color/PopUp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:fontFamily="@font/nunito_semibold"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:textSize="35sp" />&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_height="50dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_marginRight="16dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_marginBottom="16dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:orientation="horizontal">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                <ImageView&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_width="70dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginLeft="10dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginTop="8dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginRight="10dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginBottom="8dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:src="@drawable/ic_delete_black_24dp" />&ndash;&gt;-->
+
+
+    <!--    &lt;!&ndash;                <LinearLayout&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:orientation="vertical">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                    <TextView&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:id="@+id/DeleteAccount"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_height="49.7dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:gravity="center|left"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:text="Delete account"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:textSize="20sp">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                    </TextView>&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                    <View&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_height="0.3dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_marginRight="26dp"&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                        android:background="@color/LightGray" />&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                </LinearLayout>&ndash;&gt;-->
+    <!--    &lt;!&ndash;            </LinearLayout>&ndash;&gt;-->
+
+
+    <!--    &lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_height="50dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_marginRight="16dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:layout_marginBottom="16dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                android:orientation="horizontal">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                <ImageView&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_width="70dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginLeft="10dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginTop="8dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginRight="10dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_marginBottom="8dp"&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                    android:src="@drawable/ic_assignment_return_black_24dp" />&ndash;&gt;-->
+
+
+    <!--    &lt;!&ndash;                <LinearLayout&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                    android:orientation="vertical">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                    <TextView&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:id="@+id/log_Out"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:layout_height="49.7dp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:gravity="center|left"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:text="Log out"&ndash;&gt;-->
+    <!--    &lt;!&ndash;                        android:textSize="20sp">&ndash;&gt;-->
+
+    <!--    &lt;!&ndash;                    </TextView>&ndash;&gt;-->
+
+
+    <!--    &lt;!&ndash;                </LinearLayout>&ndash;&gt;-->
+    <!--    &lt;!&ndash;            </LinearLayout>&ndash;&gt;-->
+
+
+    <!--    &lt;!&ndash;        </LinearLayout>&ndash;&gt;-->
+    <!--    &lt;!&ndash;    </ScrollView>&ndash;&gt;-->
+    <!--    &lt;!&ndash;</LinearLayout>&ndash;&gt;-->

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group android:checkableBehavior="single">
+
+        <item
+
+            android:id="@+id/nav_globalstorage"
+            android:icon="@drawable/ic_shopping_basket_black_24dp"
+            android:title="Market" />
+
+        <item
+            android:id="@+id/nav_storage"
+            android:icon="@drawable/ic_storage"
+            android:title="My shop" />
+
+        <item
+            android:id="@+id/nav_ordering"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:title="Make order" />
+
+        <item
+            android:id="@+id/nav_additem"
+            android:icon="@drawable/ic_add_black_24dp"
+            android:title="Add new lot" />
+
+
+        <item
+            android:id="@+id/nav_notes"
+            android:icon="@drawable/ic_notes"
+            android:title="Orders" />
+
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Profile" />
+<!--        <item-->
+<!--            android:id="@+id/nav_mypurchses"-->
+<!--            android:icon="@drawable/ic_attach_money_black_24dp"-->
+<!--            android:title="My purchases" />-->
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_faq"
+                android:icon="@drawable/ic_faq"
+                android:title="FAQ" />
+            <item
+                android:id="@+id/nav_progress"
+                android:icon="@drawable/ic_progress"
+                android:title="Settings" />
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_assignment_return_black_24dp"
+                android:title="Log out" />
+
+        </menu>
+    </item>
+</menu>

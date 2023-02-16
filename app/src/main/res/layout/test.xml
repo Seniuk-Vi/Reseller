@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+
+
+                <TextView
+
+                    android:id="@+id/txttitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="NAMEggggggggggggggggggggjjjj"
+                    android:textDirection="anyRtl"
+                    android:textSize="40sp"
+                    android:transitionName="heading_transition" />
+                <View
+                    android:id="@+id/View1"
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:background="@color/colorAccentStronger"
+                    android:layout_below="@id/txttitle"/>
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/image_page_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_below="@id/View1"
+                    android:layout_centerHorizontal="true"
+                    android:transitionName="image_transition" />
+                <View
+                    android:id="@+id/View2"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/colorAccentStronger"
+                    android:layout_below="@id/image_page_slider"/>
+                <RelativeLayout
+                    android:id="@+id/image_page_dots"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/View2"
+                    android:gravity="center"
+
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:id="@+id/txtPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/View2"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Price"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:transitionName="price_transition" />
+
+                <TextView
+                    android:id="@+id/hrn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/View2"
+                    android:layout_marginTop="8dp"
+
+                    android:layout_toEndOf="@id/txtPrice"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="грн"
+                    android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/txtCat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:text="Category"
+                    android:layout_below="@id/View2"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="30sp"
+                    android:textStyle="italic"
+                    android:layout_alignParentRight="true"/>
+                <TextView
+
+                    android:id="@+id/txtDescHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hrn"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Description"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/txtDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_below="@id/txtDescHeading"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Description"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+               >
+
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/LightGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_below="@id/txtPrice"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal">
+
+                    <com.alexzh.circleimageview.CircleImageView
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="left|center"
+                        android:src="@mipmap/catuser" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:orientation="vertical"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/usernamebook"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center"
+
+                            android:gravity="center"
+                            android:text="User Name"
+                            android:textDirection="anyRtl"
+                            android:textSize="35dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Make Order"
+
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
